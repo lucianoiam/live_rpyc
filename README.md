@@ -5,7 +5,7 @@ This package allows interfacing with the LOM (Live Object Model) from a separate
 
 It consists in a MIDI Remote Script that accepts RPyC connections, bootstrap client code and some helper functions.
 
-It has been thoroughly tuned and tested to work on both Mac and Windows versions of Live.
+It has been thoroughly tuned and tested to work on both Mac and Windows versions of Live 10.
 
 
 ## Quick start
