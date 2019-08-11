@@ -22,6 +22,7 @@ from rpyc.lib import Timeout
 import rpyc_config
 
 
+disconnection_handler = None
 bind = None
 _conn = None
 
@@ -45,14 +46,22 @@ def connect():
 
 
 def disconnect():
+    global disconnection_handler
+    disconnection_handler = None
     _conn.root.lom_observer_helper.unbind_all()
     _conn.close()
 
 
 def start_thread():
-    worker = Thread(target=_conn.serve_all)
+    worker = Thread(target=_serve_connections)
     worker.daemon = True
     worker.start()
+
+
+def _serve_connections():
+    _conn.serve_all()
+    if disconnection_handler:
+        disconnection_handler()
 
 
 class CustomConnection(Connection):
