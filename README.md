@@ -20,8 +20,9 @@ It has been thoroughly tuned and tested to work on both Mac and Windows versions
 
     from live_rpyc import client
     
-    
-    """same as calling api from midi remote script"""
+    def current_song_time_listener():
+        print(song.get_current_beats_song_time())
+        
     Live = client.connect()
     live_app = Live.Application.get_application()
     song = live_app.get_document()
@@ -29,12 +30,9 @@ It has been thoroughly tuned and tested to work on both Mac and Windows versions
     print('Connected to Ableton Live {}.{}.{}'.format(live_app.get_major_version(),
         live_app.get_minor_version(), live_app.get_bugfix_version()))
     
-    """avoid direct add_*_listener calls and use supplied bind function instead,
-       because remove_*_listener calls will fail"""
     client.bind(song.add_current_song_time_listener, song.remove_current_song_time_listener,
         current_song_time_listener)
-    
-    """do not forget"""
+
     client.start_thread()
     
     try:
