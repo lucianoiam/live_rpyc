@@ -7,6 +7,8 @@ It consists in a MIDI Remote Script that accepts RPyC connections, bootstrap cli
 
 Runs on both Mac and Windows versions of Live 10.
 
+Based on code from https://github.com/bkillenit/AbletonAPI
+
 
 ## Quick start
 
