@@ -2,7 +2,7 @@
 #****************************************************************************************
 # File:       rpyc_server.py
 #
-# Copyright: 2019 iamluciano. All Rights reserved
+# Copyright: 2019 Luciano Iam. All Rights reserved
 #
 # Based on https://github.com/bkillenit/AbletonAPI/blob/master/python-api-materials/code/RpycHost/TaskServer.py
 #****************************************************************************************

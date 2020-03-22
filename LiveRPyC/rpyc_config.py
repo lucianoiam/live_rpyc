@@ -2,7 +2,7 @@
 #****************************************************************************************
 # File:      rpyc_config.py
 #
-# Copyright: 2019 iamluciano. All Rights reserved
+# Copyright: 2019 Luciano Iam. All Rights reserved
 #****************************************************************************************
 
 """mac uses unix domain socket"""

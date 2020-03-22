@@ -2,7 +2,7 @@
 #****************************************************************************************
 # File:       rpyc_control_surface.py
 #
-# Copyright: 2019 iamluciano. All Rights reserved
+# Copyright: 2019 Luciano Iam. All Rights reserved
 #
 # Based on https://github.com/bkillenit/AbletonAPI/blob/master/python-api-materials/code/RpycHost/RpycHost.py
 #          https://github.com/gluon/AbletonLive10_MIDIRemoteScripts/blob/master/_Framework/ControlSurface.py

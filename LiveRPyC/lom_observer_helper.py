@@ -2,7 +2,7 @@
 #****************************************************************************************
 # File:      lom_observer_helper.py
 #
-# Copyright: 2019 iamluciano. All Rights reserved
+# Copyright: 2019 Luciano Iam. All Rights reserved
 #
 # Currently there is no unbind() function for single listeners
 # because rpyc netrefs (object proxies) vary between calls
