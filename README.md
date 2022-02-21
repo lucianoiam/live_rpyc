@@ -1,7 +1,7 @@
 
 # live_rpyc
 
-This package allows interfacing with the LOM (Live Object Model － [docs here](https://julienbayle.studio/ableton-live-midi-remote-scripts/)) from a separate Python interpreter running outside the Ableton Live process.
+This package allows interfacing with the LOM (Live Object Model － [docs here](https://structure-void.com/PythonLiveAPI_documentation/Live10.1.19.xml )) from a separate Python interpreter running outside the Ableton Live process.
 
 It consists in a MIDI Remote Script that accepts [RPyC](https://github.com/tomerfiliba/rpyc) connections, bootstrap client code and some helper functions.
 
@@ -20,6 +20,7 @@ Based on code from https://github.com/bkillenit/AbletonAPI
 
 ## Example client code
 
+```Python
     from live_rpyc import client
     
     def current_song_time_listener():
@@ -43,3 +44,4 @@ Based on code from https://github.com/bkillenit/AbletonAPI
         pass
     
     client.disconnect()
+```
