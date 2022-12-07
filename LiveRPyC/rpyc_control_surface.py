@@ -10,7 +10,6 @@
 #****************************************************************************************
 
 from __future__ import with_statement
-from itertools import ifilter
 
 from _Framework import Task
 from _Framework.ControlSurface import ControlSurface
@@ -45,14 +44,14 @@ class RpycControlSurface(ControlSurface):
     @profile
     def call_listeners(self, listeners):
         with self.component_guard():
-            for listener in ifilter(lambda l: l != None, listeners):
+            for listener in filter(lambda l: l != None, listeners):
                 """avoid RuntimeError: Changes cannot be triggered by notifications...
                 by wrapping listeners in a task"""
                 try:
                     self._tasks.add(Task.run(listener))
                 except:
                     listener.disconnect()
-                    
+
     def _on_client_connected(self):
         pass
 
