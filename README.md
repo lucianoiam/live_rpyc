@@ -15,7 +15,7 @@ Based on code from https://github.com/bkillenit/AbletonAPI
 - Make sure you have Python 3 installed. Version should match Live's built-in interpreter, otherwise expect RPyC issues.
 - Copy LiveRPyC to Live's MIDI Remote Scripts directory
 - Enable LiveRPyC in Live → Preferences → MIDI → Control Surfaces
-- Run `client.py` to check everything works
+- Run `python3 client.py` to check everything works
 
 
 ## Example client code
