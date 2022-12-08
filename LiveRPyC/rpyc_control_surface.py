@@ -10,6 +10,12 @@
 #****************************************************************************************
 
 from __future__ import with_statement
+import sys
+
+python_major_version = sys.version_info[0]
+
+if python_major_version == 2:
+    from itertools import ifilter
 
 from _Framework import Task
 from _Framework.ControlSurface import ControlSurface
@@ -44,7 +50,12 @@ class RpycControlSurface(ControlSurface):
     @profile
     def call_listeners(self, listeners):
         with self.component_guard():
-            for listener in filter(lambda l: l != None, listeners):
+            if python_major_version == 2:
+                listeners_filter =  ifilter(lambda l: l != None, listeners)
+            else:
+                listeners_filter = filter(lambda l: l != None, listeners)
+
+            for listener in listeners_filter:
                 """avoid RuntimeError: Changes cannot be triggered by notifications...
                 by wrapping listeners in a task"""
                 try:
