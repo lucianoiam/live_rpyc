@@ -13,7 +13,7 @@ from __future__ import with_statement
 
 try:
     from itertools import ifilter as filter
-except:
+except ImportError:
     pass
 
 from _Framework import Task
