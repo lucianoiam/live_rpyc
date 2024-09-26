@@ -6,7 +6,11 @@
 # Copyright: 2019 Luciano Iam. All Rights reserved
 #****************************************************************************************
 
-import imp
+try:
+    import imp
+except ImportError:
+    import importlib
+
 import os
 import sys
 from threading import Thread
